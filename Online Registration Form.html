@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>HTML Forms</title>
+
+
+<style>
+ * {
+box-sizing : border-box;
+}
+@media (min-width: 320px) {
+input[type="text"], input[type="email"], input[type="tel"] {
+width : 100%;
+padding : 15px;
+margin : 5px 0 22px 0;
+display : flex;
+border : none;
+background : #f1f1f1;
+border-radius : 3px;
+margin-top : 10px;
+margin-bottom : 20px;
+font-size : 12px;
+text-align : left;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+background-color : #ddd;
+outline : none;
+font-size : 14px;
+}
+::placeholder {
+text-align : right;
+}
+textarea {
+width : 100%;
+padding : 25px;
+margin : 5px 0 22px 0;
+display : inline-block;
+border : none;
+background : #f1f1f1;
+border-radius : 3px;
+margin-top : 15px;
+margin-bottom : 20px;
+font-size : 22px;
+text-align : left;
+}
+select {
+width : 100%;
+padding : 15px;
+margin : 5px 0 22px 0;
+display : inline-block;
+border : none;
+background : #f1f1f1;
+border-radius : 3px;
+margin-top : 15px;
+margin-bottom : 20px;
+font-size : 14px;
+text-align : left;
+}
+hr {
+border : black solid 2px;
+margin-bottom : 5px;
+}
+.hr_small {
+border : black solid 1px;
+margin-bottom : 25px;
+}
+.registerbtn {
+position : relative;
+background-color : #04AA6D;
+color : white;
+padding : 15px;
+margin : 8px 0;
+border : none;
+cursor : pointer;
+width : 100%;
+opacity : 0.9;
+border-radius : 5px;
+font-size : 18px;
+}
+.registerbtn:hover {
+opacity : 1;
+}
+.signin {
+background-color : #f1f1f1;
+text-align : center;
+}
+b {
+width : 20%;
+font-size : 14px;
+color : gray;
+font-weight : normal;
+}
+h1 {
+background-color : black;
+color : white;
+padding : 20px;
+font-size : 20px;
+margin : 0 0 0 0;
+}
+h2 {
+color : black;
+font-size : 20px;
+}
+h3 {
+color : black;
+font-size : 20px;
+margin : 15px 0 15px 0;
+}
+p {
+font-size : 14px;
+text-align : center;
+color : grey;
+}
+.container {
+margin-right : auto;
+margin-left : auto;
+font-family : 'Be Vietnam Pro', sans-serif;
+}
+.container h1, h2 {
+text-align : center;
+font-family : 'Be Vietnam Pro', sans-serif;
+}
+.contact_information {
+width : 300px;
+margin-left : auto;
+margin-right : auto;
+padding-left : 10px;
+padding-right : 10px;
+}
+.form_wrapper_top {
+width : 300px;
+margin-left : auto;
+margin-right : auto;
+padding : 15px;
+}
+.Newsletter {
+font-size : 14px;
+color : gray;
+text-align : left;
+}
+.Newsletter p {
+text-align : left;
+}
+.form_wrapper p {
+text-align : left;
+}
+.checkmark:after {
+padding-top : 20px;
+}
+input[type="radio" i] {
+margin-right : 10px;
+margin-bottom : 10px;
+}
+input[type="checkbox" i] {
+margin-right : 10px;
+margin-bottom : 10px;
+}
+}
+@media (min-width: 768px) {
+input[type="text"], input[type="email"], input[type="tel"] {
+width : 70%;
+padding : 15px;
+margin : 5px 0 22px 0;
+display : inline-flex;
+border : none;
+background : #f1f1f1;
+border-radius : 3px;
+margin-top : 10px;
+margin-bottom : 10px;
+font-size : 12px;
+text-align : left;
+}
+select {
+width : 70%;
+padding : 15px;
+margin : 5px 0 22px 0;
+display : inline-flex;
+border : none;
+background : #f1f1f1;
+border-radius : 3px;
+margin-top : 10px;
+margin-bottom : 10px;
+font-size : 12px;
+text-align : left;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+background-color : #ddd;
+outline : none;
+font-size : 14px;
+}
+::placeholder {
+text-align : right;
+}
+textarea {
+padding : 25px;
+margin : 5px 0 22px 0;
+display : inline-block;
+border : none;
+background : #f1f1f1;
+border-radius : 3px;
+margin-top : 15px;
+margin-bottom : 20px;
+font-size : 22px;
+text-align : left;
+}
+hr {
+border : black solid 2px;
+margin-bottom : 5px;
+}
+.hr_small {
+border : black solid 1px;
+margin-bottom : 25px;
+}
+.registerbtn {
+position : relative;
+background-color : #04AA6D;
+color : white;
+padding : 15px;
+margin : 8px 0;
+border : none;
+cursor : pointer;
+width : 100%;
+opacity : 0.9;
+border-radius : 5px;
+font-size : 18px;
+}
+.registerbtn:hover {
+opacity : 1;
+}
+.signin {
+background-color : #f1f1f1;
+text-align : center;
+}
+b {
+font-size : 14px;
+color : gray;
+font-weight : normal;
+display : inline-block;
+}
+h1 {
+background-color : black;
+color : white;
+padding : 20px;
+font-size : 20px;
+margin : 0 0 0 0;
+}
+h2 {
+color : black;
+font-size : 20px;
+}
+h3 {
+color : black;
+font-size : 20px;
+margin : 15px 0 15px 0;
+}
+p {
+font-size : 14px;
+text-align : center;
+color : grey;
+}
+.container {
+margin-right : auto;
+margin-left : auto;
+font-family : 'Be Vietnam Pro', sans-serif;
+}
+.container h1, h2 {
+text-align : center;
+font-family : 'Be Vietnam Pro', sans-serif;
+}
+.contact_information {
+width : 700px;
+margin-left : auto;
+margin-right : auto;
+padding-left : 10px;
+padding-right : 10px;
+}
+.form_wrapper_top {
+width : 700px;
+margin-left : auto;
+margin-right : auto;
+padding : 15px;
+}
+.Newsletter {
+width : 700px;
+font-size : 14px;
+color : gray;
+text-align : left;
+padding-top : 40px;
+}
+.Newsletter p {
+text-align : left;
+}
+.form_wrapper p {
+text-align : left;
+}
+.checkmark:after {
+padding-top : 20px;
+}
+input[type="radio" i] {
+margin-right : 10px;
+margin-bottom : 10px;
+}
+input[type="checkbox" i] {
+margin-right : 10px;
+margin-bottom : 10px;
+}
+.Newsletter b {
+width : 100%;
+}
+}
+</style>
+
+ </head>
+  <body>
+<form>
+ <div class="container">
+<h1>THE CODE REVIEW</h1>
+
+      <div class="form_wrapper_top">
+         <h2>Signup for our newsletter</h2>
+    <p style="color: lightgrey;">Get the latest news on how your code is doing right in your inbox</p>
+    
+
+  </div>
+    <div class="contact_information">
+      <hr>
+      <div class="hr_small"></div>
+      <h3>Contact Information</h3>
+      <br>
+    <label for="name"><b>Full Name</b></label>
+    <input type="text" placeholder="Required" name="user_name" id="name" required>
+
+    <label for="email"><b>Email Address</b></label>
+    <input type="email" placeholder="Required" name="user_email" id="email" required>
+
+    <label for="number"><b>Phone Number</b></label>
+    <input type="tel" placeholder="" name="phone_number" id="number" required>
+
+        <label for="address"><b>Street Address</b></label>
+    <input type="text" placeholder="" name="user_address" id="address" required>
+
+            <label for="city"><b>City</b></label>
+    <input type="text" placeholder="" name="user_city" id="city" required>
+
+                <label for="state"><b>State</b></label>
+                <select id="state" name="state">
+    <option value="Choose">Choose State/option>
+    <option value="state">State 1</option>
+    <option value="state">State 2</option>
+    <option value="state">Sate 3</option>
+  </select>
+
+                    <label for="zip"><b>Zip Code</b></label>
+    <input type="text" placeholder="" name="zip_code" id="zip" required>
+
+<div class="Newsletter">
+
+      <div class="hr_small"></div>
+    <h3>Newsletter</h3>
+    <p>Select the newsletters you would like to receive</p>
+
+    <input type="checkbox" id="html_news" name="checkbox" value="html_news">
+    <label for="html_news">HTML News</label><br>
+    
+     <input type="checkbox" id="CSS_news" name="checkbox" value="css_news">
+    <label for="CSS_news">CSS News</label><br>
+
+     <input type="checkbox" id="Javascript" name="checkbox" value="HTML">
+    <label for="Javascript">Javascript News</label><br>
+
+  <p>Newsletter format</p>
+
+      <input type="radio" id="radio_html" name="radio" value="radio_html">
+
+    <label for="html_news">HTML</label><br>
+    
+     <input type="radio" id="plain_text" name="radio" value="plain_text">
+    <label for="plain_text">Plain text</label><br>
+<br>  
+<label for="topics"><b>Other topics you'd like to hear about</b></label>
+    <textarea id="topics" name="user_topics"></textarea>
+
+
+
+    <button type="submit" class="registerbtn">Sign up</button>
+    <p style="text-align: center; font-style: italic;">Copyright The Code Review</p>
+  </div>
+
+  </div>
+</div>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
