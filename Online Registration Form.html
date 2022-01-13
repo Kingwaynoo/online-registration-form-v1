@@ -4,6 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>HTML Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&family=Merriweather:wght@300&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
 
 <style>
@@ -24,17 +27,16 @@ margin-bottom : 20px;
 font-size : 12px;
 text-align : left;
 }
-input[type="text"]:focus, input[type="password"]:focus {
-background-color : #ddd;
-outline : none;
-font-size : 14px;
+input[type="text"]:focus, input[type="password"]:focus ,input[type="email"]:focus ,input[type="tel"]:focus, textarea[id="topics"]:focus {
+background-color : white;
+outline: 1px solid orange;
 }
 ::placeholder {
 text-align : right;
 }
 textarea {
 width : 100%;
-padding : 25px;
+padding : 10px;
 margin : 5px 0 22px 0;
 display : inline-block;
 border : none;
@@ -42,8 +44,9 @@ background : #f1f1f1;
 border-radius : 3px;
 margin-top : 15px;
 margin-bottom : 20px;
-font-size : 22px;
-text-align : left;
+font-size: 12px;
+    text-align: left;
+    height: 100px;
 }
 select {
 width : 100%;
@@ -103,7 +106,7 @@ h2 {
 color : black;
 font-size : 20px;
 }
-h3 {
+legend {
 color : black;
 font-size : 20px;
 margin : 15px 0 15px 0;
@@ -157,11 +160,16 @@ input[type="checkbox" i] {
 margin-right : 10px;
 margin-bottom : 10px;
 }
+fieldset {
+border: none;
+}
+input#zip {
+    width: 50%;
+}
 }
 @media (min-width: 768px) {
 input[type="text"], input[type="email"], input[type="tel"] {
-width : 70%;
-padding : 15px;
+width : 515px;
 margin : 5px 0 22px 0;
 display : inline-flex;
 border : none;
@@ -173,7 +181,7 @@ font-size : 12px;
 text-align : left;
 }
 select {
-width : 70%;
+width : 515px;
 padding : 15px;
 margin : 5px 0 22px 0;
 display : inline-flex;
@@ -185,16 +193,16 @@ margin-bottom : 10px;
 font-size : 12px;
 text-align : left;
 }
-input[type="text"]:focus, input[type="password"]:focus {
-background-color : #ddd;
-outline : none;
-font-size : 14px;
+input[type="text"]:focus, input[type="password"]:focus ,input[type="email"]:focus ,input[type="tel"]:focus, textarea[id="topics"]:focus {
+background-color : white;
+outline: 1px solid orange;
 }
 ::placeholder {
 text-align : right;
 }
 textarea {
-padding : 25px;
+width : 100%;
+padding : 10px;
 margin : 5px 0 22px 0;
 display : inline-block;
 border : none;
@@ -202,8 +210,9 @@ background : #f1f1f1;
 border-radius : 3px;
 margin-top : 15px;
 margin-bottom : 20px;
-font-size : 22px;
-text-align : left;
+font-size: 12px;
+    text-align: left;
+    height: 100px;
 }
 hr {
 border : black solid 2px;
@@ -250,7 +259,7 @@ h2 {
 color : black;
 font-size : 20px;
 }
-h3 {
+legend {
 color : black;
 font-size : 20px;
 margin : 15px 0 15px 0;
@@ -309,86 +318,95 @@ margin-bottom : 10px;
 .Newsletter b {
 width : 100%;
 }
+fieldset {
+border: none;
+}
+input#zip {
+    width: 25%;}
 }
 </style>
 
  </head>
-  <body>
+ <body>
 <form>
- <div class="container">
+<div class="container">
 <h1>THE CODE REVIEW</h1>
 
-      <div class="form_wrapper_top">
-         <h2>Signup for our newsletter</h2>
-    <p style="color: lightgrey;">Get the latest news on how your code is doing right in your inbox</p>
-    
+<div class="form_wrapper_top">
+<h2>Signup for our newsletter</h2>
+<p style="color: lightgrey;">Get the latest news on how your code is doing right in your inbox</p>
 
-  </div>
-    <div class="contact_information">
-      <hr>
-      <div class="hr_small"></div>
-      <h3>Contact Information</h3>
-      <br>
-    <label for="name"><b>Full Name</b></label>
-    <input type="text" placeholder="Required" name="user_name" id="name" required>
+</div>
+<div class="contact_information">
+<hr>
+<div class="hr_small"></div>
+<legend>Contact Information</legend>
+<br>
+<fieldset>
+<label for="name"><b>Full Name</b></label>
+<input type="text" placeholder="Required" name="user_name" id="name" required>
 
-    <label for="email"><b>Email Address</b></label>
-    <input type="email" placeholder="Required" name="user_email" id="email" required>
+<label for="email"><b>Email Address</b></label>
+<input type="email" placeholder="Required" name="user_email" id="email" required>
 
-    <label for="number"><b>Phone Number</b></label>
-    <input type="tel" placeholder="" name="phone_number" id="number" required>
+<label for="number"><b>Phone Number</b></label>
+<input type="tel" placeholder="" name="phone_number" id="number" required>
 
-        <label for="address"><b>Street Address</b></label>
-    <input type="text" placeholder="" name="user_address" id="address" required>
+<label for="address"><b>Street Address</b></label>
+<input type="text" placeholder="" name="user_address" id="address" required>
 
-            <label for="city"><b>City</b></label>
-    <input type="text" placeholder="" name="user_city" id="city" required>
+<label for="city"><b>City</b></label>
+<input type="text" placeholder="" name="user_city" id="city" required>
 
-                <label for="state"><b>State</b></label>
-                <select id="state" name="state">
-    <option value="Choose">Choose State/option>
-    <option value="state">State 1</option>
-    <option value="state">State 2</option>
-    <option value="state">Sate 3</option>
-  </select>
+<label for="state"><b>State</b></label>
+<select id="state" name="state">
+<option value="Choose">Choose State/option>
+<option value="state">State 1</option>
+<option value="state">State 2</option>
+<option value="state">Sate 3</option>
+</select>
 
-                    <label for="zip"><b>Zip Code</b></label>
-    <input type="text" placeholder="" name="zip_code" id="zip" required>
+<label for="zip"><b>Zip Code</b></label>
+<input type="text" placeholder="" name="zip_code" id="zip" required>
+
+</option>
+</select>
+</fieldset>
 
 <div class="Newsletter">
 
-      <div class="hr_small"></div>
-    <h3>Newsletter</h3>
-    <p>Select the newsletters you would like to receive</p>
+<div class="hr_small"></div>
+<legend>Newsletter</legend>
+<p>Select the newsletters you would like to receive</p>
 
-    <input type="checkbox" id="html_news" name="checkbox" value="html_news">
-    <label for="html_news">HTML News</label><br>
-    
-     <input type="checkbox" id="CSS_news" name="checkbox" value="css_news">
-    <label for="CSS_news">CSS News</label><br>
+<fieldset>
+<input type="checkbox" id="html_news" name="checkbox" value="html_news">
+<label for="html_news">HTML News</label><br>
 
-     <input type="checkbox" id="Javascript" name="checkbox" value="HTML">
-    <label for="Javascript">Javascript News</label><br>
+<input type="checkbox" id="CSS_news" name="checkbox" value="css_news">
+<label for="CSS_news">CSS News</label><br>
 
-  <p>Newsletter format</p>
+<input type="checkbox" id="Javascript" name="checkbox" value="HTML">
+<label for="Javascript">Javascript News</label><br>
 
-      <input type="radio" id="radio_html" name="radio" value="radio_html">
+<p>Newsletter format</p>
 
-    <label for="html_news">HTML</label><br>
-    
-     <input type="radio" id="plain_text" name="radio" value="plain_text">
-    <label for="plain_text">Plain text</label><br>
-<br>  
+<input type="radio" id="radio_html" name="radio" value="radio_html">
+
+<label for="html_news">HTML</label><br>
+
+<input type="radio" id="plain_text" name="radio" value="plain_text">
+<label for="plain_text">Plain text</label><br>
+<br>
 <label for="topics"><b>Other topics you'd like to hear about</b></label>
-    <textarea id="topics" name="user_topics"></textarea>
+<textarea id="topics" name="user_topics"></textarea>
+</fieldset>
 
+<button type="submit" class="registerbtn">Sign up</button>
+<p style="text-align: center; font-style: italic;">Copyright The Code Review</p>
+</div>
 
-
-    <button type="submit" class="registerbtn">Sign up</button>
-    <p style="text-align: center; font-style: italic;">Copyright The Code Review</p>
-  </div>
-
-  </div>
+</div>
 </div>
 </form>
 </body>
