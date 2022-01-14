@@ -14,7 +14,7 @@
 box-sizing : border-box;
 }
 @media (min-width: 320px) {
-input[type="text"], input[type="email"], input[type="tel"] {
+input {
 width : 100%;
 padding : 15px;
 margin : 5px 0 22px 0;
@@ -27,7 +27,19 @@ margin-bottom : 20px;
 font-size : 12px;
 text-align : left;
 }
-input[type="text"]:focus, input[type="password"]:focus ,input[type="email"]:focus ,input[type="tel"]:focus, textarea[id="topics"]:focus {
+input#checkbox {
+    width : auto;
+    display: inline-block;
+}
+input#radio {
+    width : auto;
+    display: inline-block;
+}
+input:focus {
+background-color : white;
+outline: 1px solid orange;
+}
+select#state:focus {
 background-color : white;
 outline: 1px solid orange;
 }
@@ -132,7 +144,7 @@ margin-right : auto;
 padding-left : 10px;
 padding-right : 10px;
 }
-.form_wrapper_top {
+.wrapper_top {
 width : 300px;
 margin-left : auto;
 margin-right : auto;
@@ -146,7 +158,7 @@ text-align : left;
 .Newsletter p {
 text-align : left;
 }
-.form_wrapper p {
+.wrapper p {
 text-align : left;
 }
 .checkmark:after {
@@ -168,7 +180,7 @@ input#zip {
 }
 }
 @media (min-width: 768px) {
-input[type="text"], input[type="email"], input[type="tel"] {
+input {
 width : 515px;
 margin : 5px 0 22px 0;
 display : inline-flex;
@@ -193,7 +205,11 @@ margin-bottom : 10px;
 font-size : 12px;
 text-align : left;
 }
-input[type="text"]:focus, input[type="password"]:focus ,input[type="email"]:focus ,input[type="tel"]:focus, textarea[id="topics"]:focus {
+input:focus {
+background-color : white;
+outline: 1px solid orange;
+}
+select#state:focus {
 background-color : white;
 outline: 1px solid orange;
 }
@@ -285,7 +301,7 @@ margin-right : auto;
 padding-left : 10px;
 padding-right : 10px;
 }
-.form_wrapper_top {
+.wrapper_top {
 width : 700px;
 margin-left : auto;
 margin-right : auto;
@@ -301,7 +317,7 @@ padding-top : 40px;
 .Newsletter p {
 text-align : left;
 }
-.form_wrapper p {
+.wrapper p {
 text-align : left;
 }
 .checkmark:after {
@@ -322,7 +338,7 @@ fieldset {
 border: none;
 }
 input#zip {
-    width: 25%;}
+    width: 40%;}
 }
 </style>
 
@@ -332,7 +348,7 @@ input#zip {
 <div class="container">
 <h1>THE CODE REVIEW</h1>
 
-<div class="form_wrapper_top">
+<div class="wrapper_top">
 <h2>Signup for our newsletter</h2>
 <p style="color: lightgrey;">Get the latest news on how your code is doing right in your inbox</p>
 
@@ -340,66 +356,66 @@ input#zip {
 <div class="contact_information">
 <hr>
 <div class="hr_small"></div>
-<legend>Contact Information</legend>
-<br>
 <fieldset>
-<label for="name"><b>Full Name</b></label>
-<input type="text" placeholder="Required" name="user_name" id="name" required>
+    <legend>Contact Information</legend>
+    <br>
+    <label for="name"><b>Full Name</b></label>
+    <input type="text" placeholder="Required" name="user_name" id="name" required>
 
-<label for="email"><b>Email Address</b></label>
-<input type="email" placeholder="Required" name="user_email" id="email" required>
+    <label for="email"><b>Email Address</b></label>
+    <input type="email" placeholder="Required" name="user_email" id="email" required>
 
-<label for="number"><b>Phone Number</b></label>
-<input type="tel" placeholder="" name="phone_number" id="number" required>
+    <label for="number"><b>Phone Number</b></label>
+    <input type="tel" placeholder="" name="phone_number" id="number" required>
 
-<label for="address"><b>Street Address</b></label>
-<input type="text" placeholder="" name="user_address" id="address" required>
+    <label for="address"><b>Street Address</b></label>
+    <input type="text" placeholder="" name="user_address" id="address" required>
 
-<label for="city"><b>City</b></label>
-<input type="text" placeholder="" name="user_city" id="city" required>
+    <label for="city"><b>City</b></label>
+    <input type="text" placeholder="" name="user_city" id="city" required>
 
-<label for="state"><b>State</b></label>
-<select id="state" name="state">
-<option value="Choose">Choose State/option>
-<option value="state">State 1</option>
-<option value="state">State 2</option>
-<option value="state">Sate 3</option>
-</select>
+    <label for="state"><b>State</b></label>
+    <select id="state" name="state">
+    <option value="Choose">Choose State</option>
+    <option value="state">State 1</option>
+    <option value="state">State 2</option>
+    <option value="state">Sate 3</option>
+    </select>
 
-<label for="zip"><b>Zip Code</b></label>
-<input type="text" placeholder="" name="zip_code" id="zip" required>
+    <label for="zip"><b>Zip Code</b></label>
+    <input type="text" placeholder="" name="zip_code" id="zip" required>
 
-</option>
-</select>
+    </option>
+    </select>
 </fieldset>
 
 <div class="Newsletter">
 
 <div class="hr_small"></div>
-<legend>Newsletter</legend>
-<p>Select the newsletters you would like to receive</p>
+
 
 <fieldset>
-<input type="checkbox" id="html_news" name="checkbox" value="html_news">
-<label for="html_news">HTML News</label><br>
+    <legend>Newsletter</legend>
+    <p>Select the newsletters you would like to receive</p>
+    <input type="checkbox" id="checkbox" name="checkbox" value="html_news">
+    <label for="html_news">HTML News</label><br>
 
-<input type="checkbox" id="CSS_news" name="checkbox" value="css_news">
-<label for="CSS_news">CSS News</label><br>
+    <input type="checkbox" id="checkbox" name="checkbox" value="css_news">
+    <label for="CSS_news">CSS News</label><br>
 
-<input type="checkbox" id="Javascript" name="checkbox" value="HTML">
-<label for="Javascript">Javascript News</label><br>
+    <input type="checkbox" id="checkbox" name="checkbox" value="HTML">
+    <label for="Javascript">Javascript News</label><br>
 
-<p>Newsletter format</p>
+    <p>Newsletter format</p>
 
-<input type="radio" id="radio_html" name="radio" value="radio_html">
+    <input type="radio" id="radio" name="radio" value="radio_html">
+    <label for="html_news">HTML</label><br>
 
-<label for="html_news">HTML</label><br>
-
-<input type="radio" id="plain_text" name="radio" value="plain_text">
-<label for="plain_text">Plain text</label><br>
-<br>
-<label for="topics"><b>Other topics you'd like to hear about</b></label>
-<textarea id="topics" name="user_topics"></textarea>
+    <input type="radio" id="radio" name="radio" value="plain_text">
+    <label for="plain_text">Plain text</label><br>
+    <br>
+    <label for="topics"><b>Other topics you'd like to hear about</b></label>
+    <textarea id="topics" name="user_topics"></textarea>
 </fieldset>
 
 <button type="submit" class="registerbtn">Sign up</button>
