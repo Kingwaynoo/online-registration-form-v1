@@ -27,11 +27,15 @@ margin-bottom : 20px;
 font-size : 12px;
 text-align : left;
 }
-input#checkbox {
+input#html_news, input#CSS_news, input#Javascript {
     width : auto;
     display: inline-block;
 }
-input#radio {
+input#radio_html {
+    width : auto;
+    display: inline-block;
+}
+input#plain_text {
     width : auto;
     display: inline-block;
 }
@@ -225,6 +229,18 @@ select:focus {
 background-color : white;
 outline: 1px solid orange;
 }
+input#checkbox {
+    width : auto;
+    display: inline-block;
+}
+input#radio_html {
+    width : auto;
+    display: inline-block;
+}
+input#plain_text {
+    width : auto;
+    display: inline-block;
+}
 textarea:focus {
 background-color : white;
 outline: 1px solid orange;
@@ -413,21 +429,21 @@ input#zip {
 <fieldset>
     <legend>Newsletter</legend>
     <p>Select the newsletters you would like to receive</p>
-    <input type="checkbox" id="checkbox" name="checkbox" value="html_news">
+    <input type="checkbox" id="html_news" name="checkbox" value="html_news">
     <label for="html_news">HTML News</label><br>
 
-    <input type="checkbox" id="checkbox" name="checkbox" value="css_news">
+    <input type="checkbox" id="CSS_news" name="checkbox" value="css_news">
     <label for="CSS_news">CSS News</label><br>
 
-    <input type="checkbox" id="checkbox" name="checkbox" value="HTML">
+    <input type="checkbox" id="Javascript" name="checkbox" value="HTML">
     <label for="Javascript">Javascript News</label><br>
 
     <p>Newsletter format</p>
 
-    <input type="radio" id="radio" name="radio" value="radio_html">
-    <label for="html_news">HTML</label><br>
+    <input type="radio" id="radio_html" name="radio" value="radio_html">
+    <label for="radio_html">HTML</label><br>
 
-    <input type="radio" id="radio" name="radio" value="plain_text">
+    <input type="radio" id="plain_text" name="radio" value="plain_text">
     <label for="plain_text">Plain text</label><br>
     <br>
     <label for="topics"><b>Other topics you'd like to hear about</b></label>
